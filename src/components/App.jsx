@@ -14,7 +14,7 @@ function App() {
   const updateState = (typeBtn) => {
      return typeBtn === "good" ? setGood(good + 1) : typeBtn === "neutral" ? setNeutral(neutral + 1) : setBad(bad + 1);
   }
-
+ const buttons = ['good', 'neutral', 'bad'];
  const countTotalFeedback = () => {
     return good + neutral + bad;
   };
@@ -26,7 +26,7 @@ function App() {
     <>
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={['good', 'neutral', 'bad']}
+          options={buttons}
           onLeaveFeedback={updateState}
         />
       </Section>
